@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrisciences Matriculants - Free Agricultural Sciences Lessons</title>
+    <meta name="description" content="Discover free, interactive agricultural sciences online lessons for high school learners. Watch videos from the Agrisciences Matriculants YouTube channel. Learn about farm animals, crops, agricultural business and more!">
+    <meta name="keywords" content="Grade 12 Agricultural Sciences, online lessons, Agrisciencesmatriculants, South Africa, matric help, matric exam prep, agricultural science past papers,high school agriculture, Agrisciences Matriculants YouTube, grade 12 past papers and memorundum, educational content, agricultural marketing grade 12">
+    <meta name="author" content="Agrisciences Matriculants">
+    <meta property="og:title" content="Agrisciences Matriculants - Free Agricultural Sciences Lessons">
+    <meta property="og:description" content="Interactive YouTube-based lessons for high school students in agricultural sciences. Free and fun!">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Agrisciences+Matriculants+Logo"> <!-- Replace with your channel logo/thumbnail -->
+    <meta property="og:url" content="https://yourwebsite.com"> <!-- Replace with live URL -->
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://yourwebsite.com"> <!-- Replace with live URL -->
+    <link rel="icon" href="https://via.placeholder.com/32x32?text=🌱" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Content Security Policy to allow YouTube embeds (remove if issues persist on live site) -->
+    <meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://www.youtube.com;">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc8 100%);
+            overflow-x: hidden;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(46, 125, 50, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #ffe082;
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        /* Added back - Hero Section */
+        .hero {
+            background: url('https://www.youtube.com/embed/fSVckmT3nP8') center/cover no-repeat; /* Add your image URL here if needed */
+            color: white;
+            padding: 150px 2rem 100px;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(139, 195, 74, 0.8) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        .cta-btn {
+            background: #ffd54f;
+            color: #2e7d32;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        .cta-btn:hover {
+            background: #ffb74d;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 213, 79, 0.4);
+        }
+        section {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Videos Section */
+        .videos {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .videos h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2e7d32;
+            font-weight: 700;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .video-card {
+            background: #f1f8e9;
+            border-radius: 10px 10px 0 0;
+            padding: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px 8px 0 0;
+        }
+        .video-card h3 {
+            margin-top: 1rem;
+            color: #388e3c;
+        }
+        .video-card p {
+            margin-top: 0.5rem;
+            color: #666;
+        }
+        /* Added back - About Section */
+        .about {
+            background: #f1f4f1;
+            text-align: center;
+            border-radius: 15px;
+            padding: 2rem;
+        }
+        .about h2 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+        /* Contact Section */
+        .contact {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            width: 35%;
+            color: #555;
+        }
+        footer {
+            background: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        footer a {
+            color: #c8e6c9;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px); /* Fixed typo: was trasnform */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive Design - Fixed spacing */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 60px;
+                right: -100%;
+                width: 70%;
+                height: calc(100vh - 60px); /* Fixed: added space after vh */
+                background: #2e7d32;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+                transition: right 0.3s ease;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .contact {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><h1>🌱 Agrisciences Matriculants</h1></div> <!-- Added icon for "wow" -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Added back - Hero Section for full intro -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Grow Your Knowledge in Agricultural Sciences</h1>
+            <p>Free, fun lessons straight from the Agrisciences Matriculants YouTube channel. Perfect for high school learners</p>
+            <a href="#videos" class="cta-btn">Start Learning Now</a>
+        </div>
+    </section>
+
+    <section id="videos">
+        <div class="videos">
+            <h2>Featured Lesson Videos</h2>
+            <div class="video-grid" id="video-grid">
+                <!-- Converted all iframes to embed format - Thumbnails should now load! -->
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/JNWQSGWo0Lg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural Marketing Lesson 1</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/Mn8ZkNnRXPk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural Marketing Lesson 2</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/_3rXcLSl31g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural Marketing Lesson 3</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/iFXj5V9ce3A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural Marketing Lesson 4</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/_Smn-RBILc4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural Marketing Lesson 5</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/JNWQSGWo0Lg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural science grade 12 paper 2 September trial/ preparatory past exam Eastern Cape 2024</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/Ttn9MdCqyeY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural science grade 12 paper 1 past exam EC/SEPTEMBER 2020</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/br9ykh7iNSA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural Sciences Grade 12 Paper 2 | Agricultural Marketing</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/j5Vju96hw2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural science grade 12 paper 2 Supply & demand curve | Law of supply & demand using a graph</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/fSVckmT3nP8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>Agricultural science grade 12 paper 2 September trial/ preparatory past exam Eastern Cape 2023</h3>
+                    <p>Learn agricultural sciences grade 12.</p>
+                </div>
+                <!-- End of 10 videos - Add more if needed! -->
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.youtube.com/@agrisciencesmatriculants" target="_blank" class="cta-btn">Visit Our YouTube Channel</a> <!-- Fixed: Lowercase youtube.com -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Added back - About Section -->
+    <section id="about" class="about">
+        <h2>About Agrisciences Matriculants</h2>
+        <p>We're dedicated to providing high-quality, free educational content on agricultural sciences. Our YouTube channel offers free online educational content to support south african learners who cannot afford to pay extra classes. We've got you covered—subscribe for more!</p>
+    </section>
+
+    <section id="contact">
+        <div class="videos">
+            <div class="contact">
+                
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: agrisciencesmatriculants@gmail.com<br>
+                    YouTube: <a href="https://www.youtube.com/@agrisciencesmatriculants" target="_blank">@agrisciencesmatriculants</a><br>
+                    Follow us on tiktok and Youtube for updates and more lessons!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Agrisciences Matriculants. All rights reserved. | <a href="#contact">Contact</a> | <a href="https://www.youtube.com/@agrisciencesmatriculants" target="_blank">Subscribe on YouTube</a></p> <!-- Fixed: Lowercase youtube.com -->
+    </footer>
+
+    <script>
+        // JavaScript - Same as your code, with smooth enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    const headerOffset = 60;
+                    const elementPosition = target.offsetTop;
+                    const offsetPosition = elementPosition - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu
+                    document.getElementById('nav-links').classList.remove('active');
+                });
+            });
+
+            // Mobile menu
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Hover effects
+            const videoCards = document.querySelectorAll('.video-card');
+            videoCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.05)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
